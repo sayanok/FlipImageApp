@@ -1,0 +1,44 @@
+<script>
+  let horizontal = 1;
+  let vertical = 1;
+  function clickHandler(imageId, direction) {
+    var elem = document.getElementById(imageId);
+
+
+    if (direction === "vertical") {
+      vertical === -1 ? vertical = 1 : vertical = -1
+    } else {
+      horizontal === -1 ? horizontal = 1 : horizontal = -1
+    }
+    elem.style.transform = `scale(${horizontal}, ${vertical})`;
+  }
+</script>
+
+<body>
+  <ul>
+    <image id="birthday" src="./images/birthday.jpg" />
+    <button onclick="clickHandler('birthday', 'vertical')">↑</button>
+    <button onclick="clickHandler('birthday', 'horizontal')">→</button>
+    <button onclick="clickHandler('birthday', 'vertical')">↓</button>
+    <button onclick="clickHandler('birthday', 'horizontal')">←</button>
+
+    <image id="bucha" src="./images/bucha.jpg" />
+    <button onclick="clickHandler('bucha', 'vertical')">↑</button>
+    <button onclick="clickHandler('bucha', 'horizontal')">→</button>
+    <button onclick="clickHandler('bucha', 'vertical')">↓</button>
+    <button onclick="clickHandler('bucha', 'horizontal')">←</button>
+  </ul>
+  <ul>
+    <image id="hikouki" src="./images/hikouki.jpg" />
+    <button onclick="clickHandler('hikouki', 'vertical')">↑</button>
+    <button onclick="clickHandler('hikouki', 'horizontal')">→</button>
+    <button onclick="clickHandler('hikouki', 'vertical')">↓</button>
+    <button onclick="clickHandler('hikouki', 'horizontal')">←</button>
+
+    <image id="zenbuyukinosei" src="./images/zenbuyukinosei.jpg" />
+    <button onclick="clickHandler('zenbuyukinosei', 'vertical')">↑</button>
+    <button onclick="clickHandler('zenbuyukinosei', 'horizontal')">→</button>
+    <button onclick="clickHandler('zenbuyukinosei', 'vertical')">↓</button>
+    <button onclick="clickHandler('zenbuyukinosei', 'horizontal')">←</button>
+  </ul>
+</body>
